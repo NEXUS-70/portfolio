@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rayeed Ashrafee — Web Developer</title>
+<meta name="description" content="Rayeed Ashrafee, web developer from Bangladesh. Fast, beautiful, interactive websites.">
+<meta name="theme-color" content="#020404">
+<link rel="canonical" href="%VITE_SITE_URL%/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rayeed Ashrafee — Web Developer">
+<meta property="og:description" content="Fast, beautiful, interactive websites. Web apps, 3D and motion.">
+<meta property="og:url" content="%VITE_SITE_URL%/">
+<meta property="og:image" content="%VITE_SITE_URL%/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Rayeed Ashrafee","jobTitle":"Web Developer","url":"%VITE_SITE_URL%/","sameAs":["https://github.com/NEXUS-70","https://www.linkedin.com/in/rayeed-ashrafee-87621b433","https://www.instagram.com/zykelith/"]}</script>
+<noscript><style>body.ld main,body.ld .bar{opacity:1;visibility:visible}body.ld{overflow:auto}#boot,#gl,#flight,#hud,#lab,#ret{display:none}</style></noscript>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>html{background:#020404}body{margin:0}</style>
+<script type="module" src="/src/main.js"></script>
+</head>
+<body class="ld">
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<div id="grain" aria-hidden="true"></div>
+<div id="ret" aria-hidden="true"><i class="ring"></i><i class="dot"></i></div>
+<div id="hud" class="mono" aria-hidden="true">
+  <canvas id="radar" width="128" height="128"></canvas>
+  <div class="hud-n"><span id="hcount">[ 00 / 49 ]</span><div id="ticks"></div><div class="hud-k"><span id="k-i">[I] INDEX</span><span id="k-m">[M] MODE</span><span id="k-a">[←/→] NAV</span></div></div>
+  <div class="hud-t">X <b id="hx">+000.0</b> Y <b id="hy">+000.0</b> Z <b id="hz">000.0</b></div>
+</div>
+
+<aside id="lab" class="mono">
+  <button id="lab-t" type="button">[ + FX LAB ]</button>
+  <div id="lab-p" hidden>
+    <label>Bend<input id="fx-bend" type="range" min="0" max="2" step=".05" value="1"></label>
+    <label>RGB split<input id="fx-split" type="range" min="0" max="2" step=".05" value="0"></label>
+    <label>Grain<input id="fx-grain" type="range" min="0" max=".3" step=".01" value=".07"></label>
+  </div>
+</aside>
+
+<div id="prog" aria-hidden="true"></div>
+<div id="boot" role="status" aria-label="Loading"></div>
+
+<header class="bar mono">
+  <a href="#top">Rayeed Ashrafee</a>
+  <nav><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a><button class="nav-btn" data-open="index-dlg">Index</button><button class="nav-btn" data-open="contact-dlg">Hire me</button></nav>
+</header>
+
+<main>
+  <section id="top" class="hero">
+    <h1>I turn ideas into fast, beautiful websites.</h1>
+    <p class="mono cue">Scroll ↓</p>
+  </section>
+
+  <section id="flight" aria-label="Photographs">
+    <div class="sticky mono">
+      <p>Photographs, dark to dawn</p>
+      <div class="modes" role="group" aria-label="Render mode">
+        <button data-m="auto" class="on">Auto</button><button data-m="dots">Dots</button><button data-m="dither">Dither</button><button data-m="full">Full</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="statement" aria-label="By the numbers">
+    <div class="sticky">
+      <ul class="nums">
+        <li><b data-n="49">49</b><span class="mono">Photographs</span></li>
+        <li><b data-n="6">06</b><span class="mono">Projects</span></li>
+        <li><b data-n="7">07</b><span class="mono">Certificates</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="mono">01 / About</p>
+    <p class="big">I'm Rayeed, a web developer who builds clean, responsive, interactive websites with HTML, CSS, JavaScript and TypeScript, and learns by shipping real projects. Available for freelance web design and front-end or back-end work.</p>
+    <dl class="stack mono">
+      <div><dt>Frontend</dt><dd>React · Next.js · TypeScript · GSAP · Tailwind · Three.js</dd></div>
+      <div><dt>Backend</dt><dd>Node.js · Express · Python · FastAPI · GraphQL</dd></div>
+      <div><dt>Infrastructure</dt><dd>PostgreSQL · Docker · AWS · Vercel</dd></div>
+      <div><dt>Tools</dt><dd>Figma · Git · Postman · VS Code · Arch Linux</dd></div>
+    </dl>
+    <p class="mono">Beyond code</p>
+    <p class="beyond">I photograph skies, dusk and light. The photographs on this site are from my own camera roll.</p>
+  </section>
+
+  <div class="marquee mono" aria-hidden="true"><div><span>React</span><span>Next.js</span><span>TypeScript</span><span>Three.js</span><span>GSAP</span><span>Tailwind CSS</span><span>Node.js</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>AWS</span><span>Figma</span><span>Python</span><span>React</span><span>Next.js</span><span>TypeScript</span><span>Three.js</span><span>GSAP</span><span>Tailwind CSS</span><span>Node.js</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>AWS</span><span>Figma</span><span>Python</span></div></div>
+
+  <section id="services">
+    <p class="mono">02 / Disciplines</p>
+    <ol class="svc">
+      <li><span class="mono">A</span><b>Websites</b><i>Clean, responsive sites that load fast and look sharp on every screen.</i></li>
+      <li><span class="mono">B</span><b>Web apps</b><i>Front-end and back-end work, from the interface to the database.</i></li>
+      <li><span class="mono">C</span><b>Interactive and 3D</b><i>Three.js scenes and motion that make a site memorable.</i></li>
+      <li><span class="mono">D</span><b>Shaders</b><i>GLSL effects, from lensing to dithering, running live in the browser.</i></li>
+      <li><span class="mono">E</span><b>Hardware</b><i>Embedded builds like PhoneBed, from firmware to touchscreen interface.</i></li>
+      <li><span class="mono">F</span><b>Photography</b><i>Light, dusk and sky: learning to see before building.</i></li>
+    </ol>
+    <button class="cta mono" data-open="contact-dlg">Start a project ↗</button>
+  </section>
+
+  <section id="story">
+    <p class="mono">03 / Process</p>
+    <ol class="tl">
+      <li><span class="mono">01</span><b>Listen</b><i>What is it for, and who is it for?</i></li>
+      <li><span class="mono">02</span><b>Sketch</b><i>Structure and look, before any code.</i></li>
+      <li><span class="mono">03</span><b>Build</b><i>Fast, accessible, responsive, with care in the details.</i></li>
+      <li><span class="mono">04</span><b>Ship</b><i>Deploy, measure, fix what real people hit.</i></li>
+      <li><span class="mono">05</span><b>Polish</b><i>Motion, speed and the small things.</i></li>
+    </ol>
+    <p class="mono">04 / Now</p>
+    <ul class="now mono">
+      <li><span>Building</span>This portfolio</li>
+      <li><span>Making</span>PhoneBed, an ESP32 smart bed</li>
+      <li><span>Exploring</span>Shaders and 3D on the web</li>
+      <li><span>Open to</span>Freelance web projects</li>
+    </ul>
+  </section>
+
+  <section id="work">
+    <p class="mono">05 / Selected work</p>
+    <ol class="cases">
+      <li><a href="#"><span class="mono">01</span><b>Black Hole: Beyond the Event Horizon</b><i>Interactive 3D black hole with gravitational lensing.</i><em class="mono">Three.js · GLSL · GSAP</em></a></li>
+      <li><a href="#"><span class="mono">02</span><b>Iterantic</b><i>A marketplace for jobs, services and bookings, with messaging.</i><em class="mono">React · TanStack Start · Supabase</em></a></li>
+      <li><a href="#"><span class="mono">03</span><b>PhoneBed</b><i>A smart phone bed that charges your phone and wakes you up.</i><em class="mono">ESP32-S3 · C++ · LVGL</em></a></li>
+      <li><a href="#"><span class="mono">04</span><b>SnapStudio</b><i>A web photo booth with filters, frames and collages.</i><em class="mono">React · Canvas · WebRTC</em></a></li>
+      <li><a href="#"><span class="mono">05</span><b>Casio FX-991CW Pro</b><i>A working scientific calculator, inspired by the Casio fx-991CW.</i><em class="mono">TypeScript · Math.js · KaTeX</em></a></li>
+      <li><a href="#"><span class="mono">06</span><b>Casio FX-991CW AI</b><i>An AI assistant that listens to what I say and does my tasks for me on my computer.</i><em class="mono">React · TypeScript · Math.js · KaTeX · LLM API</em></a></li>
+    </ol>
+  </section>
+
+  <section id="recognition">
+    <p class="mono">06 / Recognition</p>
+    <p class="count" aria-hidden="true">07</p>
+    <ol class="rec">
+      <li><span class="mono">01</span><b>IBM Full Stack Software Developer Professional Certificate</b><em class="mono">IBM · 2026</em></li>
+      <li><span class="mono">02</span><b>Meta Front-End Developer Professional Certificate</b><em class="mono">Meta · 2026</em></li>
+      <li><span class="mono">03</span><b>AWS Certified Developer – Associate</b><em class="mono">Amazon Web Services · 2025</em></li>
+      <li><span class="mono">04</span><b>CS50’s Web Programming with Python and JavaScript</b><em class="mono">Harvard, CS50 · 2025</em></li>
+      <li><span class="mono">05</span><b>CS50’s Introduction to Computer Science</b><em class="mono">Harvard, CS50 · 2025</em></li>
+      <li><span class="mono">06</span><b>Open Science 101</b><em class="mono">NASA · 2025</em></li>
+      <li><span class="mono">07</span><b>Google Ads Apps Certification</b><em class="mono">Google · 2025</em></li>
+    </ol>
+  </section>
+
+  <section id="contact">
+    <p class="mono">07 / Contact</p>
+    <h2 class="finale">Let’s build something together.</h2>
+    <a class="mail" href="mailto:zykelith@proton.me">zykelith@proton.me</a>
+    <button class="cta mono" data-open="contact-dlg">Start a project ↗</button>
+    <p class="mono"><button class="nav-btn" id="copy" type="button">Copy email</button> <span id="copied" role="status"></span></p>
+    <p class="mono links">
+      <a href="https://github.com/NEXUS-70">GitHub</a>
+      <a href="https://www.linkedin.com/in/rayeed-ashrafee-87621b433">LinkedIn</a>
+      <a href="https://www.instagram.com/zykelith/">Instagram</a>
+    </p>
+    <button class="cta mono" data-top>Back to top ↑</button>
+    <p class="bigname" aria-hidden="true">Rayeed Ashrafee</p>
+    <p class="mono" id="overlap"></p>
+    <p class="mono" id="gh" hidden></p>
+    <p class="mono foot">Dhaka <span id="clock">--:--:--</span> GMT+6 · © 2026 Rayeed Ashrafee</p>
+  </section>
+</main>
+
+<dialog data-lenis-prevent id="index-dlg" aria-labelledby="ix-h">
+  <button class="x mono" data-close>Close ✕</button>
+  <p class="mono">Index</p>
+  <h2 id="ix-h">49 photographs</h2>
+  <ol id="ix" class="mono"></ol>
+  <img id="ix-prev" alt="" aria-hidden="true">
+</dialog>
+
+<dialog data-lenis-prevent id="case" aria-labelledby="c-name">
+  <button class="x mono" data-close>Close ✕</button>
+  <p class="mono"><span id="c-idx"></span> / Case file</p>
+  <h2 id="c-name"></h2>
+  <div id="c-shot" class="shot mono"></div>
+  <p id="c-desc" class="big sm"></p>
+  <p id="c-meta" class="mono"></p>
+  <p id="c-tags" class="mono"></p>
+  <p id="c-links" class="mono links"></p>
+</dialog>
+
+<dialog data-lenis-prevent id="contact-dlg" aria-labelledby="f-h">
+  <button class="x mono" data-close>Close ✕</button>
+  <p class="mono">Start a project</p>
+  <h2 id="f-h">Tell me what you’re building.</h2>
+  <form id="form">
+    <label class="mono">Name<input name="name" required autocomplete="name"></label>
+    <label class="mono">Email<input type="email" name="email" required autocomplete="email"></label>
+    <label class="mono">What do you need?<select name="need"><option>Website</option><option>Web app</option><option>3D or interactive</option><option>Something else</option></select></label>
+    <label class="mono">Message<textarea name="message" rows="4" required></textarea></label>
+    <input name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit" class="cta mono">Send</button>
+    <p id="form-msg" class="mono" role="status"></p>
+  </form>
+</dialog>
+</body>
+</html>
